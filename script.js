@@ -51,3 +51,18 @@ const clearButton = document.getElementById("clear-btn")
 clearButton.addEventListener('click', function(){
     history.innerHTML='';
 })
+
+//copy btn
+const copyCount = document.getElementById("copy-count")
+const copyBtns = document.getElementsByClassName("copy-btn")
+for(let i = 0; i< copyBtns.length; i++){
+    copyBtns[i].addEventListener('click', function(){
+        const card = this.parentElement.parentElement;
+        const copyBtnNumber = card.getElementsByClassName("service-number")[0].innerText
+         navigator.clipboard.writeText(copyBtnNumber);
+         const newCopyCount = parseInt(copyCount.innerText) + 1;
+         console.log(newCopyCount)
+         copyCount.innerText = newCopyCount;
+         alert(`copied ${copyBtnNumber} to clipbord!`);
+    })
+}
