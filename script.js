@@ -27,9 +27,14 @@ for(let i = 0; i<callButton.length; i++){
         }
         coin -= 20;
         coinCount.innerText = coin;
+
          //history
          const cardTitle = card.getElementsByClassName("card-title")[0].innerText
          history.innerHTML += `<p class="bg-gray-100 p-2 mt-2 rounded-lg mx-2"><b>${cardTitle}</b> <br> ${number}</p>`;
          alert(`calling ${name} at ${number} `)
     })
 }
+const clearButton = document.getElementById("clear-btn")
+clearButton.addEventListener('click', function(){
+    history.innerHTML='';
+})
