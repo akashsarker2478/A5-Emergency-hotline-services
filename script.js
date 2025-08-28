@@ -17,8 +17,6 @@ for(let i = 0; i<callButton.length; i++){
         const card = this.parentElement.parentElement;
         const name = card.getElementsByClassName("service-name")[0].innerText
         const number = card.getElementsByClassName("service-number")[0].innerText
-        console.log('service name', name)
-        console.log('service number',number)
 
         //coin
         if(coin<20){
@@ -29,8 +27,23 @@ for(let i = 0; i<callButton.length; i++){
         coinCount.innerText = coin;
 
          //history
+         const now = new Date();
+         const option = {
+            timeZone : 'Asia/Dhaka',
+            hour : '2-digit',
+            minute : '2-digit',
+            second : '2-digit',
+         };
+         const bdTime = now.toLocaleTimeString ('en-US',option);
+         
          const cardTitle = card.getElementsByClassName("card-title")[0].innerText
-         history.innerHTML += `<p class="bg-gray-100 p-2 mt-2 rounded-lg mx-2"><b>${cardTitle}</b> <br> ${number}</p>`;
+         history.innerHTML += `<div  class="bg-gray-100 p-2 mt-2 rounded-lg mx-2">
+         <b>${cardTitle}</b> <br>
+            <div class="flex justify-between">
+                <span>${number}</span>
+                 <span>${bdTime}</span>
+            </div>
+         </div>`;
          alert(`calling ${name} at ${number} `)
     })
 }
