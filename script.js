@@ -20,7 +20,7 @@ for(let i = 0; i<callButton.length; i++){
 
         //coin
         if(coin<20){
-            alert("you don't have enough coin.you need 20 coin to make a call.")
+            alert("⚠️ you don't have enough coin.you need 20 coin to make a call.")
             return;
         }
         coin -= 20;
@@ -44,7 +44,7 @@ for(let i = 0; i<callButton.length; i++){
                  <span>${bdTime}</span>
             </div>
          </div>`;
-         alert(`calling ${name} at ${number} `)
+         alert(`📞calling ${name} at ${number} `)
     })
 }
 const clearButton = document.getElementById("clear-btn")
