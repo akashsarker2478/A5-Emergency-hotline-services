@@ -20,7 +20,7 @@ for(let i = 0; i<callButton.length; i++){
 
         //coin
         if(coin<20){
-            alert('not enough coin')
+            alert("you don't have enough coin.you need 20 coin to make a call.")
             return;
         }
         coin -= 20;
