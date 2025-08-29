@@ -44,7 +44,7 @@ for(let i = 0; i<callButton.length; i++){
                  <span>${bdTime}</span>
             </div>
          </div>`;
-         alert(`📞calling ${name} at ${number} `)
+         alert(`📞calling ${name} at ${number}... `)
     })
 }
 const clearButton = document.getElementById("clear-btn")
@@ -63,6 +63,6 @@ for(let i = 0; i< copyBtns.length; i++){
          const newCopyCount = parseInt(copyCount.innerText) + 1;
          console.log(newCopyCount)
          copyCount.innerText = newCopyCount;
-         alert(`copied ${copyBtnNumber} to clipbord!`);
+         alert(`📋copied ${copyBtnNumber} to clipbord!`);
     })
 }
